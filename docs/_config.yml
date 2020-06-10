@@ -1,0 +1,66 @@
+# Site
+name: "Simons' Guides"
+title: "Simons' Guides"
+description: "A site with technical guides for myself and anyone else"
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: '' # (Default: '/mediumish-theme-jekyll')
+#google_analytics: 'UA-46278016-1'
+#disqus: 'demowebsite'
+#mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+include: ["_pages"]
+permalink: /:title/
+featured: false
+
+# Authors
+authors:
+  Simon:
+    name: Simon Lerpard
+    display_name: Simon
+    avatar: 'assets/images/simon_avatar.png'
+    gravatar: 4b942d0b76bf4019d17466cf59bdb9cc
+    email: Simon@s-guides.com
+    web: https://s-guides.com
+    paypal: https://www.paypal.me/simonlerpard
+    description: "I'm a software developer from Sweden who prefers to work in the background with backend stuff, so no frontend! I'm the creator of this site. I love ice cream so if you like what you read, please buy me one."
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-target-blank
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+
+# Pagination
+paginate: 6
+paginate_path: /page:num/
+
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: "ca-pub-3412143450191416"
+adsense-data-ad-slot: "1363087678"
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
